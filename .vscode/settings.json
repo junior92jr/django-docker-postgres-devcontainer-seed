@@ -1,0 +1,36 @@
+{
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "sqltools.connections": [
+    {
+      "name": "Container database",
+      "driver": "PostgreSQL",
+      "previewLimit": 50,
+      "server": "db",
+      "port": 5432,
+      "database": "postgres",
+      "username": "postgres",
+      "password": "postgres"
+    }
+  ],
+  "python.defaultInterpreterPath": "/usr/local/bin/python",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+  "python.languageServer": "Pylance",
+  "python.testing.pytestEnabled": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "editor.rulers": [
+    88
+  ],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.autoComplete.extraPaths": [
+    "./workspace"
+  ]
+}
