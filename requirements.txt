@@ -6,4 +6,7 @@ environ==1.0
 # Database packages
 psycopg2==2.9.10
 
+django-stubs==5.2.2
+pytest-django==4.11.1
+
 -r dev-requirements.txt
