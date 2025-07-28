@@ -11,6 +11,9 @@ services:
     environment:
       DATABASE_URI: postgresql://postgres:postgres@db/web
       DATABASE_URI_TEST: postgresql://postgres:postgres@db/web_test
+      SECRET_KEY: supersecretkey
+      DEBUG: True
+      ALLOWED_HOSTS: localhost,127.0.0.1
 
     command: sleep infinity
     network_mode: service:db
