@@ -7,7 +7,7 @@
       "previewLimit": 50,
       "server": "db",
       "port": 5432,
-      "database": "postgres",
+      "database": "web_test",
       "username": "postgres",
       "password": "postgres"
     }
@@ -16,9 +16,9 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
+  "python.languageServer": "Pylance",
   "editor.insertSpaces": true,
   "editor.tabSize": 4,
-  "python.languageServer": "Pylance",
   "python.testing.pytestEnabled": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -28,7 +28,7 @@
     88
   ],
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.typeCheckingMode": "off",
   "python.analysis.diagnosticMode": "workspace",
   "python.autoComplete.extraPaths": [
     "./workspace"
