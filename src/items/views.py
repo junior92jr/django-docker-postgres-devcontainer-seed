@@ -5,7 +5,8 @@ from .serializers import ItemSerializer
 
 
 class ItemViewSet(viewsets.ModelViewSet):
-    """ViewSet for the Item model."""
-
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+    filterset_fields = ["price"]
+    search_fields = ["name", "description"]
+    ordering_fields = ["price", "created_at"]
