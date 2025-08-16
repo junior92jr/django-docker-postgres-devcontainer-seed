@@ -28,6 +28,7 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
     "corsheaders",
     "django_filters",
+    "django_celery_beat",
 ]
 
 # Local apps
@@ -130,3 +131,12 @@ SPECTACULAR_SETTINGS = {
 
 # Email settings for development
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# Redis URL
+CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+
+# Optional, but recommended
+CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND")
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
