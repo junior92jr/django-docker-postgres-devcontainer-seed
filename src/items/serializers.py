@@ -15,6 +15,7 @@ class ItemSerializer(serializers.ModelSerializer):
             "name",
             "description",
             "price",
+            "external_price",
             "created_at",
             "updated_at",
         )
