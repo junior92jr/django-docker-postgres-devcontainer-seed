@@ -1,19 +1,32 @@
-# Django and related packages
+# Django core
 Django==5.1.7
+
+# REST framework
 djangorestframework==3.15.2
+drf-spectacular==0.28.0
+django-filter==25.1
+djangorestframework-simplejwt==5.5.1
+
+# Environment & configuration
 django-environ==0.12.0
 environ==1.0
-drf-spectacular==0.28.0
-django-cors-headers==4.7.0
-djangorestframework-simplejwt==5.5.1
-django-filter==25.1
 
-# Database packages
+# CORS & caching
+django-cors-headers==4.7.0
+redis==6.2.0
+
+# Celery & periodic tasks
+celery==5.5.3
+django-celery-beat==2.8.1
+
+# Database
 psycopg2==2.9.10
 
+# Typing support
 django-stubs==5.2.2
-pytest-django==4.11.1
 
+# Faker for generating test data in runtime (optional)
 faker==37.4.2
 
+# Include dev requirements separately
 -r dev-requirements.txt
