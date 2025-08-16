@@ -1,5 +1,4 @@
 import random
-from datetime import datetime, timedelta
 
 from django.core.management.base import BaseCommand
 from faker import Faker
@@ -15,7 +14,6 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         self.stdout.write("Generating 100,000 fake items...")
 
-        now = datetime.now()
         items = []
 
         for _ in range(100000):
