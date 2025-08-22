@@ -6,4 +6,4 @@ class ItemsConfig(AppConfig):
     name = "items"
 
     def ready(self):
-        import items.signals
+        pass

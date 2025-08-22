@@ -9,7 +9,7 @@ services:
       - ..:/workspace:cached
     working_dir: /workspace/src
     env_file:
-      - ../.env
+      - ../.env_files/.env
 
     command: sleep infinity
     depends_on:
@@ -22,7 +22,7 @@ services:
       - ..:/workspace:cached
     working_dir: /workspace/src
     env_file:
-      - ../.env
+      - ../.env_files/.env
 
     command: celery -A backend worker --loglevel=info
     depends_on:
@@ -37,7 +37,7 @@ services:
       - ..:/workspace:cached
     working_dir: /workspace/src
     env_file:
-      - ../.env
+      - ../.env_files/.env
     command: celery -A backend beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
     depends_on:
       - redis
@@ -57,7 +57,7 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - ../.env
+      - ../.env_files/.env
 
 volumes:
   postgres-data:
