@@ -39,7 +39,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Load CI environment variables
-        working-directory: src
         run: |
           set -o allexport
           source .env.ci
