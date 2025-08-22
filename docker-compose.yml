@@ -7,7 +7,7 @@ services:
     volumes:
       - ./:/workspace:cached
     env_file:
-      - .env
+      - .env_files/.env
     command: ["/bin/sh", "/workspace/scripts/django/start.sh"]
     ports:
       - "8000:8000"
@@ -25,7 +25,7 @@ services:
     volumes:
       - ./:/workspace:cached
     env_file:
-      - .env
+      - .env_files/.env
     command: ["/bin/sh", "/workspace/scripts/celery/worker.sh"]
     depends_on:
       db:
@@ -43,7 +43,7 @@ services:
       - ./:/workspace:cached
     working_dir: /workspace/src
     env_file:
-      - .env
+      - .env_files/.env
     command: ["/bin/sh", "/workspace/scripts/celery/beat.sh"]
     depends_on:
       db:
@@ -74,7 +74,7 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - .env
+      - .env_files/.env
     networks:
       - backend
     healthcheck:
