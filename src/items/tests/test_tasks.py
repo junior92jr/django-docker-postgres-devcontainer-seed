@@ -5,8 +5,10 @@ from unittest.mock import MagicMock
 import pytest
 
 from items.models import Item
-from items.tasks import (hourly_external_price_sync,
-                         simulate_external_price_sync_for_item)
+from items.tasks import (
+    hourly_external_price_sync,
+    simulate_external_price_sync_for_item,
+)
 from items.utils.price_sync import sync_all_items
 
 
