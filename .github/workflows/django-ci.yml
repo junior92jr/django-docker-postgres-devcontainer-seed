@@ -35,19 +35,20 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Load CI environment variables
-        run: |
-          set -o allexport
-          source .env.ci
-          set +o allexport
+        run: pip install -r requirements.txt
 
       - name: Run migrations
         working-directory: src
-        run: python manage.py migrate
+        run: |
+          set -o allexport
+          source ../.env.ci
+          python manage.py migrate
+          set +o allexport
 
       - name: Run tests
         working-directory: src
-        run: pytest
+        run: |
+          set -o allexport
+          source ../.env.ci
+          pytest
+          set +o allexport
