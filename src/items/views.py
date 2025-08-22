@@ -7,7 +7,8 @@ from rest_framework.response import Response
 
 from .models import Item
 from .serializers import ItemSerializer
-from .tasks import hourly_external_price_sync, simulate_external_price_sync_for_item
+from .tasks import (hourly_external_price_sync,
+                    simulate_external_price_sync_for_item)
 
 
 class ItemViewSet(viewsets.ModelViewSet):

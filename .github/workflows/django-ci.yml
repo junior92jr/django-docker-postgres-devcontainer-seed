@@ -41,7 +41,7 @@ jobs:
         working-directory: src
         run: |
           set -o allexport
-          source ../.env.ci
+          source ../.env_files/.env.ci
           python manage.py migrate
           set +o allexport
 
@@ -49,6 +49,6 @@ jobs:
         working-directory: src
         run: |
           set -o allexport
-          source ../.env.ci
+          source ../.env_files/.env.ci
           pytest
           set +o allexport
